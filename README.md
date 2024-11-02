@@ -26,7 +26,7 @@ The main entry point for the application is located in the Main.cpp file, where 
 - Thread.cpp / Thread.h: Provides threading utilities.
 - Config.cpp / Config.h: Manages configuration settings, such as loading parameters from config.txt.
 ### Configuration File
-config.txt: Contains configuration settings for the emulator.
+- config.txt: Contains configuration settings for the emulator.
 
 
 
