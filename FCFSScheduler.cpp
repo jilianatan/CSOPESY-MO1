@@ -17,7 +17,6 @@ void FCFS_Scheduler::add_process(Process* proc) {
     std::lock_guard<std::mutex> lock(mtx);
     process_queue.push(proc);
     cv.notify_one();
-    //std::cout << "Added process " << proc->name << " to the queue.\n";
 }
 
 void FCFS_Scheduler::start() {
@@ -45,7 +44,6 @@ void FCFS_Scheduler::stop() {
             thread.join();
         }
     }
-    //std::cout << "Scheduler stopped.\n";
 }
 void FCFS_Scheduler::cpu_worker(int core_id) {
     // Set up the random number generator
