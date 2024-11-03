@@ -25,7 +25,6 @@ ConsoleManager::ConsoleManager() {
             break;
         }
     }
-
     // Create MAIN_MENU console if it doesn't exist
     if (!mainMenuExists) {
         std::shared_ptr<Console> mainConsole(new Console("MAIN_MENU", 1, 1, 0));
@@ -34,11 +33,6 @@ ConsoleManager::ConsoleManager() {
             currentConsole = mainConsole;
         }
     }
-
-
-
-
-    //    GetConsoleScreenBufferInfo(console_handle_, &csbi_info_);
 }
 
 
@@ -155,20 +149,6 @@ bool ConsoleManager::handleCommand(const std::string& command) {
     else if (command == "clear") {
         clearScreen();
     }
-    else if (command == "initialilze") {}
-
-    else if (command == "screen") {
-        // Implement screen function
-        std::cout << "'screen' command recognized. Doing something." << std::endl;
-    }
-    else if (command == "process-smi") {
-        // Implement process-smi function
-        std::cout << "'process-smi' command recognized. Doing something." << std::endl;
-    }
-    else if (command == "nvidia-smi") {
-        // Implement nvidia-smi function
-        std::cout << "'nvidia-smi' command recognized. Doing something." << std::endl;
-    }
 
     else {
         std::cout << "Unknown command: " << command << std::endl;
@@ -205,7 +185,6 @@ void ConsoleManager::drawAllConsoles() {
         // Now you can access properties of the console object
         std::cout << "Name: " << console.getName() << std::endl;
 
-        //consolePtr->drawProcess();
     }
 
     std::cout << "Currently Selected Console: " << std::endl;

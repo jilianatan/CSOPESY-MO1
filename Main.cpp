@@ -114,8 +114,6 @@ int main() {
                     rr_scheduler.print_process_details(tokens[2], 0);
                 }
             }
-
-
         }
 
         else if (command == "show") {
@@ -150,11 +148,6 @@ int main() {
 
         }
 
-        else if (command == "nvidia-smi") {
-            // Implement nvidia-smi function
-            std::cout << "'nvidia-smi' command recognized. Doing something." << std::endl;
-        }
-
         else if (command == "initialize") {
             initialized = true;
             Config::Initialize();
@@ -170,8 +163,6 @@ int main() {
                 rr_scheduler.SetQuantum(Config::GetConfigParameters().quantum_cycles);
                 rr_scheduler.start();
             }
-
-
         }
 
         // "scheduler-stop"
