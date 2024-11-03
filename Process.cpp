@@ -1,7 +1,7 @@
 #include "process.h"
 #include <iomanip>
 #include <ctime>
-#include <sstream> // Ensure this header is included
+#include <sstream> 
 #include <iostream>
 
 int Process::next_process_id = 1; // Initialize static member for unique process id
@@ -35,16 +35,15 @@ std::string Process::get_status() const {
     }
     return oss.str();
 }
-void Process::displayProcessInfo() const {
-    //print the process information
 
-    std::cout << "Process name: " << name << "\n";
+//print the process information
+void Process::displayProcessInfo() const {
+    std::cout << "Process Name: " << name << "\n";
     std::cout << "Process ID: " << process_id << "\n\n";
 
     if (executed_commands < total_commands) {
         std::cout << "Current Instruction Line: " << executed_commands << "\n";
         std::cout << "Lines of Code: " << total_commands << "\n";
-
     }
     else {
         std::cout << "Finished!\n";

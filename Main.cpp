@@ -8,7 +8,6 @@
 #include "RRScheduler.h"
 #include <random>
 
-
 int main() {
     displayHeader();
     std::string command;
@@ -16,12 +15,9 @@ int main() {
     ConsoleManager console_manager;
     bool running = true;
 
-    // Initialize min and max process instructions
-
     // Initialize scheduler
     FCFS_Scheduler fcfs_scheduler(0);
     RR_Scheduler rr_scheduler(0, 0);
-
 
     // Initialize scheduling test
     std::thread scheduler_thread;
@@ -144,8 +140,6 @@ int main() {
             if (Config::GetConfigParameters().scheduler == "rr") {
                 rr_scheduler.print_process_details(screen_process_name, 1);
             }
-
-
         }
 
         else if (command == "initialize") {
@@ -201,8 +195,6 @@ int main() {
                         }
 
 
-
-
                         std::this_thread::sleep_for(std::chrono::milliseconds((int)(Config::GetConfigParameters().batch_process_freq * 1000)));
 
                     }
@@ -225,8 +217,6 @@ int main() {
             if (Config::GetConfigParameters().scheduler == "rr") {
                 rr_scheduler.screen_ls();
             }
-
-
         }
 
         // "screen -r"
@@ -240,7 +230,6 @@ int main() {
                 if (Config::GetConfigParameters().scheduler == "rr") {
                     rr_scheduler.print_process_details(tokens[2], 0);
                 }
-
             }
             else {
                 if (Config::GetConfigParameters().scheduler == "fcfs") {
@@ -250,8 +239,6 @@ int main() {
                 if (Config::GetConfigParameters().scheduler == "rr") {
                     rr_scheduler.print_process_details(tokens[2], 1);
                 }
-
-
             }
 
             screen_process_name = tokens[2];
@@ -267,7 +254,6 @@ int main() {
             if (Config::GetConfigParameters().scheduler == "rr") {
                 rr_scheduler.ReportUtil();
             }
-
         }
 
         else {

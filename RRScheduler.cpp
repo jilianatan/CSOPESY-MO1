@@ -98,7 +98,6 @@ void RR_Scheduler::screen_ls() {
     print_CPU_UTIL();
     print_running_processes();
     print_finished_processes();
-
 }
 
 void RR_Scheduler::SetCpuCore(int cpu_core) {
@@ -109,8 +108,7 @@ void RR_Scheduler::SetQuantum(int quantum) {
     this->time_quantum = quantum;
 }
 
-bool RR_Scheduler::isValidProcessName(const std::string& process_name)
-{
+bool RR_Scheduler::isValidProcessName(const std::string& process_name) {
     std::lock_guard<std::mutex> lock(mtx);
 
     // Check process_queue
@@ -150,7 +148,6 @@ void RR_Scheduler::ReportUtil() {
     std::vector<int> cores_used;
     int total_executed_commands = 0;
     int total_commands = 0;
-
     {
         std::lock_guard<std::mutex> lock(mtx);
 
@@ -197,7 +194,6 @@ void RR_Scheduler::ReportUtil() {
     std::cout << "Report generated at /csopesy-log.txt" << std::endl;
 }
 
-
 void RR_Scheduler::print_running_processes() {
 
     std::cout << "Running processes:\n";
@@ -227,8 +223,6 @@ void RR_Scheduler::print_CPU_UTIL() {
     std::cout << "Cores Available: " << num_cores - numOfRunningProcess << "\n";
     std::cout << "----------------\n";
 }
-
-
 
 void RR_Scheduler::print_process_details(const std::string& process_name, int screen) {
     std::lock_guard<std::mutex> lock(mtx);
@@ -277,4 +271,3 @@ void RR_Scheduler::print_process_details(const std::string& process_name, int sc
     // If process not found in any list
     std::cout << "Process " << process_name << " not found.\n";
 }
-

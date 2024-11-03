@@ -45,6 +45,7 @@ void FCFS_Scheduler::stop() {
         }
     }
 }
+
 void FCFS_Scheduler::cpu_worker(int core_id) {
     // Set up the random number generator
     std::random_device rd;
@@ -53,7 +54,6 @@ void FCFS_Scheduler::cpu_worker(int core_id) {
 
     while (running) {
         Process* proc = nullptr;
-
         {
             std::unique_lock<std::mutex> lock(mtx);
             cv.wait(lock, [&] { return !process_queue.empty() || !running; });
@@ -89,9 +89,6 @@ void FCFS_Scheduler::cpu_worker(int core_id) {
             std::lock_guard<std::mutex> lock(mtx);
             running_processes.remove(proc);
             finished_processes.push_back(proc);
-
-
-
         }
     }
 }
@@ -122,8 +119,7 @@ void FCFS_Scheduler::screen_ls() {
 void FCFS_Scheduler::print_process_details(const std::string& process_name, int screen) {
     std::lock_guard<std::mutex> lock(mtx);
 
-
-    // Check process_queue
+    // Check process queue
     std::queue<Process*> temp_queue = process_queue;
     while (!temp_queue.empty()) {
         Process* proc = temp_queue.front();
@@ -135,7 +131,7 @@ void FCFS_Scheduler::print_process_details(const std::string& process_name, int 
         }
     }
 
-    // Check running_processes 
+    // Check running processes 
     for (auto& proc : running_processes) {
         if (proc->name == process_name && screen == 0) {
             system("cls");
@@ -148,7 +144,7 @@ void FCFS_Scheduler::print_process_details(const std::string& process_name, int 
         }
     }
 
-    // Check finished_processes
+    // Check finished processes
     for (auto& proc : finished_processes) {
         if (proc->name == process_name && screen == 1) {
             proc->displayProcessInfo();
@@ -163,7 +159,6 @@ void FCFS_Scheduler::print_process_details(const std::string& process_name, int 
 
     // If process not found in any list
     std::cout << "Process " << process_name << " not found.\n";
-
 }
 
 void FCFS_Scheduler::print_process_queue_names() {
@@ -188,7 +183,6 @@ void FCFS_Scheduler::ReportUtil() {
     std::vector<int> cores_used;
     int total_executed_commands = 0;
     int total_commands = 0;
-
     {
         std::lock_guard<std::mutex> lock(mtx);
 
@@ -229,7 +223,6 @@ void FCFS_Scheduler::ReportUtil() {
     log << std::endl;
     std::cout << "Report generated at /csopesy-log.txt" << std::endl;
 }
-
 
 bool FCFS_Scheduler::isValidProcessName(const std::string& process_name)
 {

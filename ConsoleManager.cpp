@@ -16,8 +16,6 @@ int totalCount = 0;
 
 ConsoleManager::ConsoleManager() {
     bool mainMenuExists = false;
-
-
     // Check if MAIN_MENU console already exists
     for (const auto& consolePtr : consoles) {
         if (consolePtr->getName() == "MAIN_MENU") {
@@ -132,7 +130,6 @@ bool ConsoleManager::handleCommand(const std::string& command) {
         else {
             std::cout << "Can't find screen" << std::endl;
         }
-
     }
 
     // The current console is not the main menu and the screen -s command is entered.
@@ -184,7 +181,6 @@ void ConsoleManager::drawAllConsoles() {
 
         // Now you can access properties of the console object
         std::cout << "Name: " << console.getName() << std::endl;
-
     }
 
     std::cout << "Currently Selected Console: " << std::endl;

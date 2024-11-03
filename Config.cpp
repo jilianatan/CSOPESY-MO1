@@ -6,8 +6,6 @@
 
 Config::ConfigParameters Config::config_parameters_;
 
-
-
 void Config::Initialize() {
     // Read config.txt file
     std::ifstream config_file("config.txt");
@@ -62,4 +60,3 @@ Config::ConfigParameters Config::GetConfigParameters()
 {
     return config_parameters_;
 }
-

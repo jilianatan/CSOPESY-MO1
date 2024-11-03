@@ -22,10 +22,9 @@ void Console::drawProcess() {
 	system("cls");
 	std::cout << "Process: " << name << std::endl;
 	std::cout << "ID: " << processId << std::endl;
-	std::cout << "Current instruction line: " << currentLine << std::endl;
-	std::cout << "Total line of instruction: " << totalLines << std::endl;
+	std::cout << "Current Instruction Line: " << currentLine << std::endl;
+	std::cout << "Total Lines of Instruction: " << totalLines << std::endl;
 	std::cout << "Timestamp: " << timestamp << std::endl;
-
 }
 
 
