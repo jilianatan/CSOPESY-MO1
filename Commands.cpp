@@ -12,12 +12,13 @@ void displayHeader() {
         "| |___ ___) | |_| |  __/| |___ ___) || |  \n"
         " \\____|____/ \\___/|_|   |_____|____/ |_|  \n";
 
-    std::cout << "\033[1;32m"; // 1;32m represents bold green text
+    std::cout << "\033[1;32m"; // green text
     std::cout << "Hi, Welcome to the CSOPESY command line!" << std::endl;
 
-    std::cout << "\033[1;33m"; // 1;33m represents bold yellow text
+    std::cout << "\033[1;33m"; // yellow text
     std::cout << "Type 'exit' to quit, 'clear' to clear the screen" << std::endl;
-    std::cout << "\033[0m"; // Reset text color to default
+    std::cout << "\033[0m"; 
+
 }
 
 void clearScreen() {

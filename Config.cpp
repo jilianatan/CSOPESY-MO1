@@ -9,7 +9,7 @@ Config::ConfigParameters Config::config_parameters_;
 
 
 void Config::Initialize() {
-    // Read config.txt file
+    
     std::ifstream config_file("config.txt");
     if (!config_file.is_open()) {
         std::cout << "Failed to open file \"config.txt\"" << std::endl;

@@ -7,7 +7,6 @@ private:
     int totalLines;
     std::string timestamp;
     int processId;
-
 public:
     Console(std::string n, int cLine, int tLines, int id);
 

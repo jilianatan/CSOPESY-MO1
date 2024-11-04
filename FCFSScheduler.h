@@ -11,6 +11,7 @@
 
 class FCFS_Scheduler {
 private:
+
     std::queue<Process*> process_queue;
     std::vector<std::thread> cpu_threads;
     std::atomic<bool> running;
@@ -23,6 +24,7 @@ private:
     void cpu_worker(int core_id);
 
 public:
+
     FCFS_Scheduler(int cores);
     ~FCFS_Scheduler();
 

@@ -12,6 +12,7 @@ private:
     static std::vector<std::shared_ptr<Console>> consoles;
 
 public:
+
     ConsoleManager();
     ~ConsoleManager();
 

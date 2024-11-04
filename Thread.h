@@ -4,7 +4,6 @@ class Thread {
 public:
 	Thread();
 	~Thread();
-
 	static void Sleep(int ms);
 	void Start();
 

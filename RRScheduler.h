@@ -8,6 +8,7 @@
 #include <list>
 
 class RR_Scheduler {
+
 private:
     int num_cores;
     int time_quantum;

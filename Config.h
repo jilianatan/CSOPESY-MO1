@@ -13,7 +13,6 @@ public:
 		int max_ins;
 		double delay_per_exec;
 	};
-
 	static void Initialize();
 	static ConfigParameters GetConfigParameters();
 

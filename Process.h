@@ -7,8 +7,11 @@
 
 class Process {
 private:
+
     static int next_process_id;
+
 public:
+
     std::string name;
     int total_commands;
     int executed_commands;
