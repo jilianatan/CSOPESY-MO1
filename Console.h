@@ -15,7 +15,6 @@ public:
 
     std::string getName() const;
 
-
     int getCurrentLine() const { return currentLine; }
     int getTotalLines() const { return totalLines; }
     int getProcessId() const { return processId; }

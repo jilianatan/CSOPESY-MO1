@@ -1,14 +1,12 @@
 #include "process.h"
 #include <iomanip>
 #include <ctime>
-#include <sstream> // Ensure this header is included
+#include <sstream>
 #include <iostream>
 
-int Process::next_process_id = 1; // Initialize static member for unique process id
+int Process::next_process_id = 1; 
 Process::Process(const std::string& pname, int commands)
     : name(pname), total_commands(commands), executed_commands(0), core_id(-1), process_id(next_process_id++) {
-    // log_file.open(name + ".txt", std::ios::out | std::ios::app);
-    // log_file << "Process name: " << name << "\nLogs:\n";
     start_time = std::chrono::system_clock::now();
 }
 

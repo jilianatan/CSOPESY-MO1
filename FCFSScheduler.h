@@ -37,7 +37,6 @@ public:
     void SetCpuCore(int cpu_core);
     void ReportUtil();
 
-    // Validates process name against the queued, running, and finished processes lists
     bool isValidProcessName(const std::string& process_name);
     void print_CPU_UTIL();
 };

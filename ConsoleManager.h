@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Console.h"
 #include <string>
 #include <vector>

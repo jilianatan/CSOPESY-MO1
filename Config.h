@@ -19,5 +19,4 @@ public:
 
 private:
 	static ConfigParameters config_parameters_;
-
 };
