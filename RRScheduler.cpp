@@ -68,9 +68,9 @@ void RR_Scheduler::cpu_worker(int core_id) {
                 //  proc->displayProcessInfo();
 
             }
+            std::this_thread::sleep_for(std::chrono::seconds(1));
 
             std::this_thread::sleep_for(std::chrono::milliseconds((int)(Config::GetConfigParameters().delay_per_exec * 1000))); // Simulated command execution time change this to delays per exec
-            // commands_to_execute-=5;
 
             if (executed_in_quantum >= time_quantum) {
                 break; // Exit the loop to re-add the process to the queue

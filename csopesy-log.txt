@@ -1,12 +1,24 @@
 CPU Utilization: 100%
-Cores Used: 4
+Cores Used: 16
 Cores Available: 0
 ----------------
 Running processes:
-process1 (11/04/2024 04:36:46PM) Core: 2 99 / 152
-process2 (11/04/2024 04:36:46PM) Core: 0 76 / 131
-process3 (11/04/2024 04:36:47PM) Core: 1 59 / 190
-process4 (11/04/2024 04:36:47PM) Core: 3 60 / 121
+process20 (11/04/2024 07:08:16PM) Core: 8 15 / 5000
+process34 (11/04/2024 07:08:16PM) Core: 14 5 / 5000
+process26 (11/04/2024 07:08:16PM) Core: 4 10 / 5000
+process1 (11/04/2024 07:08:17PM) Core: 0 35 / 5000
+process6 (11/04/2024 07:08:17PM) Core: 6 30 / 5000
+process35 (11/04/2024 07:08:17PM) Core: 7 5 / 5000
+process11 (11/04/2024 07:08:17PM) Core: 15 25 / 5000
+process27 (11/04/2024 07:08:18PM) Core: 1 10 / 5000
+process16 (11/04/2024 07:08:18PM) Core: 11 20 / 5000
+process21 (11/04/2024 07:08:18PM) Core: 13 15 / 5000
+process36 (11/04/2024 07:08:19PM) Core: 2 5 / 5000
+process2 (11/04/2024 07:08:19PM) Core: 10 35 / 5000
+process28 (11/04/2024 07:08:19PM) Core: 9 10 / 5000
+process7 (11/04/2024 07:08:20PM) Core: 3 30 / 5000
+process37 (11/04/2024 07:08:20PM) Core: 12 5 / 5000
+process12 (11/04/2024 07:08:20PM) Core: 5 25 / 5000
 
 Finished processes:
 ----------------
